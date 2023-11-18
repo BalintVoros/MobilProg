@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/turquoise"
+        android:id="@+id/titleLayout">
+
+        <EditText
+            android:id="@+id/listNameEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NÉVTELEN LISTA"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_check_24"
+            android:layout_gravity="end"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/editNameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checklist"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/basketCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/turquoise"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="15dp"
+        android:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_shopping_basket_24"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/basketText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kosár tartalma: "
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_help_outline_24"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/leftText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Még hátravan: "
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_attach_money_24"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/sumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Összesen: "
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kezdjük a bevásárlást!"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/addButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
